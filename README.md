@@ -34,7 +34,14 @@ The platform is built around a dimensional (star schema) architecture and suppor
 - Embedded data quality validation rules
 - Integration with reporting tools such as Power BI and national systems
 
+The full database implementation is available in:
+- `sql/ddl/create_mis_star_schema.sql`
+
 This repository is intended to demonstrate a practical, field-tested approach to building robust MIS data systems for government and development partners.
+
+
+
+
 ## Overview
 
 This repository demonstrates the design and implementation of a scalable Management Information System (MIS) data platform tailored for Monitoring & Evaluation (M&E) in public sector and donor-funded programmes.
