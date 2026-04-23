@@ -1,6 +1,28 @@
 ## Monitoring & Evaluation (M&E) MIS Data Platform
 # MIS M&E Data Platform
 
+This repository is intended to demonstrate a practical, field-tested approach to building robust MIS data systems for government and development partners.
+
+
+## Overview
+
+This repository demonstrates the design and implementation of a scalable Management Information System (MIS) data platform tailored for Monitoring & Evaluation (M&E) in public sector and donor-funded programmes.
+
+The platform is built using a dimensional data modelling approach (star schema) to support structured, indicator-based reporting. It is designed to handle high-volume, multi-dimensional data commonly found in national systems such as health, education, and social protection programmes.
+
+The model supports:
+- Routine reporting across facilities, districts, and provinces
+- Indicator tracking across multiple programme areas
+- Disaggregation by age group and gender
+- Time-series analysis using both calendar and programme-specific reporting periods (e.g. PEPFAR financial year)
+
+The design reflects practical experience in building data systems that must balance:
+- Data completeness and quality
+- Performance and scalability
+- Flexibility for evolving reporting requirements
+
+It is suitable for integration into national MIS environments and analytics platforms used by government institutions and development partners.
+
 ![Architecture](assets/diagrams/architecture_overview.png)
 
 ## Monitoring & Evaluation (M&E) MIS Data Platform
@@ -37,29 +59,7 @@ The platform is built around a dimensional (star schema) architecture and suppor
 The full database implementation is available in:
 - `sql/ddl/create_mis_star_schema.sql`
 
-This repository is intended to demonstrate a practical, field-tested approach to building robust MIS data systems for government and development partners.
 
-
-
-
-## Overview
-
-This repository demonstrates the design and implementation of a scalable Management Information System (MIS) data platform tailored for Monitoring & Evaluation (M&E) in public sector and donor-funded programmes.
-
-The platform is built using a dimensional data modelling approach (star schema) to support structured, indicator-based reporting. It is designed to handle high-volume, multi-dimensional data commonly found in national systems such as health, education, and social protection programmes.
-
-The model supports:
-- Routine reporting across facilities, districts, and provinces
-- Indicator tracking across multiple programme areas
-- Disaggregation by age group and gender
-- Time-series analysis using both calendar and programme-specific reporting periods (e.g. PEPFAR financial year)
-
-The design reflects practical experience in building data systems that must balance:
-- Data completeness and quality
-- Performance and scalability
-- Flexibility for evolving reporting requirements
-
-It is suitable for integration into national MIS environments and analytics platforms used by government institutions and development partners.
 
 ## System Architecture
 
