@@ -1,6 +1,11 @@
 ## Monitoring & Evaluation (M&E) MIS Data Platform
+# MIS M&E Data Platform
 
-This repository presents a production-oriented Management Information System (MIS) data platform designed for Monitoring & Evaluation (M&E) use cases in public sector and donor-funded programmes.
+![Architecture](assets/diagrams/architecture_overview.png)
+
+## Monitoring & Evaluation (M&E) MIS Data Platform
+
+This repository presents a production-oriented Management Information System (MIS) data platform...
 
 The design reflects over a decade of practical experience supporting large-scale health and development programmes, including indicator-based reporting frameworks such as PEPFAR. It demonstrates how structured data modelling, validation logic, and analytical design can be combined to deliver reliable, scalable, and decision-ready information systems.
 
@@ -320,4 +325,118 @@ HAVING
 SELECT *
 FROM Data
 WHERE GenderID IS NULL
-   OR AgeGroupID IS NULL;    
+   OR AgeGroupID IS NULL;   
+
+## Key Features
+
+- **Indicator-Based Data Model**  
+  Supports multiple programme indicators (e.g. TX_CURR, TX_NEW, HTS_TST) within a unified structure.
+
+- **Multi-Dimensional Disaggregation**  
+  Enables analysis by geography (facility, district, province), age group, and gender.
+
+- **Time Intelligence Support**  
+  Includes both calendar-based and programme-specific reporting periods (e.g. PEPFAR financial year).
+
+- **Scalable Star Schema Design**  
+  New indicators and programme areas can be added without structural changes.
+
+- **Integrated Data Quality Framework**  
+  Built-in validation rules ensure consistency and reliability of reported data.
+
+- **Optimized for Analytics**  
+  Designed for efficient aggregation and integration with BI tools such as Power BI.
+
+## Example Use Cases
+
+This platform is designed to support real-world M&E scenarios, including:
+
+- **Routine Programme Monitoring**  
+  Track key indicators such as TX_CURR and TX_NEW over time.
+
+- **Disaggregated Reporting**  
+  Analyse performance across age groups, gender, and geographic regions.
+
+- **Trend Analysis**  
+  Identify growth, decline, and seasonal patterns in programme indicators.
+
+- **Data Quality Monitoring**  
+  Detect inconsistencies such as TX_NEW exceeding TX_CURR.
+
+- **Performance Analysis**  
+  Compare facilities, districts, and provinces to identify high- and low-performing areas.
+
+- **Policy and Planning Support**  
+  Provide evidence for resource allocation and programme design decisions.
+
+## Integration & Deployment
+
+The platform is designed to integrate with common systems used in government and development environments.
+
+### Reporting Tools
+
+- Power BI (primary integration)
+- Other BI tools (e.g. Tableau)
+
+### National Systems
+
+- DHIS2 or equivalent national health information systems
+- Data exchange via APIs or scheduled extracts
+
+### Deployment Options
+
+- On-premise SQL Server environments
+- Cloud-based data platforms (Azure SQL, Synapse, etc.)
+
+### Pipeline Integration
+
+- SQL-based ETL/ELT workflows
+- dbt for modular transformation pipelines
+
+
+## Repository Structure
+mis-mne-data-platform/
+│
+├── sql/ # Database scripts (DDL, views, validation)
+├── dbt/ # Transformation layer (optional extension)
+├── docs/ # Architecture and design documentation
+├── samples/ # Example analytical and validation queries
+├── powerbi/ # Reporting integration notes
+├── assets/ # Diagrams and supporting materials
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+
+
+This structure reflects a modular, production-oriented approach to MIS system design.
+
+## Getting Started
+
+1. Create a SQL Server database environment
+
+2. Execute DDL scripts:
+
+   - `sql/ddl/create_mis_star_schema.sql`
+
+3. Load or simulate data into dimension and fact tables
+
+4. Run sample queries:
+
+   - `samples/analytical_queries.sql`
+   - `samples/validation_queries.sql`
+
+5. Connect a reporting tool (e.g. Power BI) to build dashboards
+
+---
+
+This repository is intended as a reference architecture and can be adapted to specific programme requirements.
+
+
+## Author
+
+Jonathan Mukundu  
+Data Strategist | MIS Architect | M&E Systems Specialist
+
+This repository reflects practical experience designing and implementing data systems for large-scale health and development programmes across multiple countries.
+

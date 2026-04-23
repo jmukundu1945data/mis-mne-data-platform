@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Python / dbt
+venv/
+target/
+dbt_packages/
+
+# Power BI
+*.pbix
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
