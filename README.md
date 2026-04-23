@@ -17,35 +17,6 @@ The platform is built around a dimensional (star schema) architecture and suppor
 - Integration with reporting tools such as Power BI and national systems
 
 This repository is intended to demonstrate a practical, field-tested approach to building robust MIS data systems for government and development partners.
-
-# MIS M&E Data Platform
-
-## Overview
-*(we will fill this next)*
-
-## System Architecture
-*(star schema + layers)*
-
-## Data Model
-*(fact + dimensions explanation)*
-
-## Key Features
-*(disaggregation, time, scalability)*
-
-## Data Quality Framework
-*(very important section)*
-
-## Example Use Cases
-*(dashboards, reporting, policy tracking)*
-
-## Integration & Deployment
-*(Power BI, DHIS2, government systems)*
-
-## Repository Structure
-*(explain folders you created)*
-
-## Getting Started
-*(basic instructions)*
 ## Overview
 
 This repository demonstrates the design and implementation of a scalable Management Information System (MIS) data platform tailored for Monitoring & Evaluation (M&E) in public sector and donor-funded programmes.
