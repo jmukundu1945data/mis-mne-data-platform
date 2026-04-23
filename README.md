@@ -4,7 +4,25 @@
 ![Architecture](assets/diagrams/architecture_overview.png)
 
 ## Monitoring & Evaluation (M&E) MIS Data Platform
+## Data Model (ERD)
 
+The following diagram illustrates the core MIS data architecture based on a star schema design.
+
+![MIS ERD](assets/diagrams/erd_mis_star_schema.png)
+### Design Summary
+
+The model follows a star schema approach with a central fact table (`Data`) capturing indicator values, linked to multiple analytical dimensions:
+
+- **Time** (calendar + PEPFAR financial year)
+- **Geography** (Facility → District → Province hierarchy)
+- **Program**
+- **Data Elements (Indicators)**
+- **Demographics** (Age Group, Gender)
+
+This structure supports:
+- Disaggregated reporting
+- Indicator-based aggregation
+- Scalable integration into BI tools such as Power BI
 This repository presents a production-oriented Management Information System (MIS) data platform...
 
 The design reflects over a decade of practical experience supporting large-scale health and development programmes, including indicator-based reporting frameworks such as PEPFAR. It demonstrates how structured data modelling, validation logic, and analytical design can be combined to deliver reliable, scalable, and decision-ready information systems.
